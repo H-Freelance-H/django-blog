@@ -1,8 +1,10 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
 <div class="blog-post">
 	<h2 class="blog-post-title">{{ post.title }}</h2>
+	<a class="btn btn-info" href="{% url 'post_edit' pk=post.pk %}"><span class="fi-pencil"></span></a>
 	<p class="blog-post-meta">{{ post.created_date }} by <a href="#">{{ post.author }}</a></p>
 	{{ post.text }}
 </div>
